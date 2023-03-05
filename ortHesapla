@@ -1,0 +1,31 @@
+public class JavaPatika {
+    public static void main(String[] args){
+
+        byte fizik, kimya, turkce, tarih, muzik;
+
+        Scanner oku = new Scanner(System.in);
+
+        System.out.print("Lütfen Fizik ders notunu giriniz...");
+        fizik = oku.nextByte();
+
+        System.out.print("Lütfen kimya ders notunu giriniz...");
+        kimya = oku.nextByte();
+
+        System.out.print("Lütfen Türkçe ders notunu giriniz...");
+        turkce = oku.nextByte();
+
+        System.out.print("Lütfen tarih ders notunu giriniz...");
+        tarih = oku.nextByte();
+
+        System.out.print("Lütfen kimya müzik notunu giriniz...");
+        muzik = oku.nextByte();
+
+        float ort = (fizik+kimya+turkce+tarih+muzik)/5;
+
+        System.out.println("Not ortalaması => "+ort);
+
+
+        String sonuc = (ort > 60) ? "Sınıfı Geçti" : "Sınıfta Kaldı";
+        System.out.println(sonuc);
+    }
+}
