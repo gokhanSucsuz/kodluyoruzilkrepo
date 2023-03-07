@@ -1,0 +1,19 @@
+mport java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] kenar= new int[3];
+        float u,uCevre,uAlan;
+        Scanner scn = new Scanner(System.in);
+        for(int i=0;i<3;i++){
+            System.out.println("Lütfen "+(i+1)+". kenar uzunluğunu giriniz...");
+            kenar[i] = scn.nextInt();
+        }
+
+        u = (kenar[0]+kenar[1]+kenar[2])/2;
+        uCevre = u*2;
+        uAlan = u*(u-kenar[0])*(u-kenar[1])*(u-kenar[2]);
+        System.out.println("Üçgenin alanı => "+uAlan);
+        System.out.println("Üçgenin çevresi => "+uCevre);
+    }
+}
