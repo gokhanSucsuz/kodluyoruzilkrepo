@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    double pi = 3.14;
+    double alan, yaricap;
+    System.out.println("Lütfen yarıçapı giriniz...");
+    Scanner input = new Scanner(System.in);
+    yaricap = input.nextDouble();
+    System.out.println("Lütfen merkez açısının ölçüsünü giriniz...");
+    alan = (pi * (yaricap * yaricap) * input.nextInt());
+    System.out.println("Dairenin Alanı: " + alan);
+    }
+}
