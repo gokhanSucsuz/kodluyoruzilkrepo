@@ -1,0 +1,25 @@
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double Armut = 2.14;
+        double Elma = 3.67;
+        double Domates = 1.11;
+        double Muz = 0.95;
+        double Patlican = 5.00;
+        double toplam = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Armut kaç kilo?");
+        toplam += Armut * input.nextDouble();
+        System.out.println("Elma kaç kilo?");
+        toplam += Elma * input.nextDouble();
+        System.out.println("Domates kaç kilo?");
+        toplam += Domates * input.nextDouble();
+        System.out.println("Muz kaç kilo?");
+        toplam += Muz * input.nextDouble();
+        System.out.println("Patlıcan kaç kilo?");
+        toplam += Patlican * input.nextDouble();
+        System.out.println("Toplam Tutar : " + toplam);
+    }
+}
