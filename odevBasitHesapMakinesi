@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int ilk, son;
+        double sonuc;
+        int islem;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("İlk sayıyı giriniz...");
+        ilk = scan.nextInt();
+        System.out.println("İkinci sayıyı giriniz...");
+        son = scan.nextInt();
+
+        System.out.println("******************İşlemler******************");
+        System.out.println("Toplama işlemi için : 1");
+        System.out.println("Çıkarma işlemi için : 2");
+        System.out.println("Çarpma işlemi için : 3");
+        System.out.println("Bölme işlemi için : 4");
+        System.out.println("Yapılacak işlemi seçiniz...");
+        islem = scan.nextInt();
+        try{
+        switch (islem) {
+            case 1 -> System.out.println("Sonuç = " + (ilk + son));
+            case 2 -> System.out.println("Sonuç = " + (ilk - son));
+            case 3 -> System.out.println("Sonuç = " + (ilk * son));
+            case 4 -> System.out.println("Sonuç = " + (ilk / son));
+            default -> System.out.println("Yanlış işlem yaptınız...");
+        }
+        } catch (Exception exception){
+            System.out.println("Sıfıra bölme tanımsızdır!");
+        }
+
+   /*     if(islem.equals("+")) System.out.println("Sonuç = " + ilk+son);
+        else if (islem.equals("-")) System.out.println("Sonuc =" + (ilk-son));
+        else if(islem.equals("*")) System.out.println("Sonuc = " + ilk*son);
+        else if(islem.equals("/")) {
+            if(son == 0){
+                System.out.println("Sıfıra bölme işlemi tanımsızdır!");
+
+            } else
+            System.out.println("Sonuc = " + ilk/son);
+        }
+        */
+
+    }
+}
