@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int mat, fizik, turkce, kimya, muzik;
+        double ortalama=0;
+        byte sayac=0;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Matematik notunuz");
+        mat = scan.nextInt();
+        if(mat>0 && mat<=100) {ortalama +=mat; sayac++;}
+        System.out.println("Fizik notunuz");
+        fizik = scan.nextInt();
+        if(fizik>0 && fizik<=100) {ortalama +=fizik; sayac++;}
+        System.out.println("Türkçe notunuz");
+        turkce = scan.nextInt();
+        if(turkce>0 && turkce<=100) {ortalama +=turkce; sayac++;}
+        System.out.println("Kimya notunuz");
+        kimya = scan.nextInt();
+        if(kimya>0 && kimya<=100) {ortalama +=kimya; sayac++;}
+        System.out.println("Müzik notunuz");
+        muzik = scan.nextInt();
+        if(muzik>0 && muzik<=100) {ortalama +=muzik; sayac++;}
+        ortalama = ortalama / sayac;
+        if(ortalama>=55) System.out.println("Geçti! Ortalama ="+ortalama);
+            else System.out.println("Kaldı! Ortalama ="+ortalama);
+    }
+}
