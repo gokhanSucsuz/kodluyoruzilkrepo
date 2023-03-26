@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        String userName, password, cevap, ypassword;
+        boolean durum = false;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please write your username: ");
+        userName = scan.nextLine();
+        System.out.print("Please write your password: ");
+        password = scan.nextLine();
+        if (userName.equals("patika") && (password.equals("java123")))
+        {
+
+            System.out.println("Başarıyla giriş yapıldı!");
+        } else {
+            System.out.println("Giriş başarısız oldu!");
+            System.out.println("Şifrenizi sıfırlamak istiyor musunuz?(E/H)");
+            cevap = scan.next();
+            if (cevap.equals("E") || cevap.equals("e"))
+            {
+                while (!durum)
+                {
+                    System.out.println("Lütfen yeni bir şifre giriniz...");
+                    ypassword = scan.next();
+                    if (ypassword.equals(password) || ypassword.equals("java123"))
+                    {
+                        System.out.println("Şifre oluşturulamadı! Lütfen kayıtlı şifreniz veya son girdiğiniz şifreden farklı bir şifre giriniz...");
+                    } else  {
+                        System.out.println("Şifre oluşturuldu!");
+                        durum = true;
+                    }
+                }
+            }
+        }
+    }
+}
