@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int year;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter your birth year...");
+        year = scan.nextInt();
+        if(year<2024) {
+            switch (year % 12) {
+                case 0 -> System.out.println("China Zodiac is Monkey!");
+                case 1 -> System.out.println("China Zodiac is Cockerel");
+                case 2 -> System.out.println("China Zodiac is Dog");
+                case 3 -> System.out.println("China Zodiac is Pig");
+                case 4 -> System.out.println("China Zodiac is Mouse");
+                case 5 -> System.out.println("China Zodiac is Oxen");
+                case 6 -> System.out.println("China Zodiac is Tiger");
+                case 7 -> System.out.println("China Zodiac is Rabbit");
+                case 8 -> System.out.println("China Zodiac is Dragon");
+                case 9 -> System.out.println("China Zodiac is Snake");
+                case 10 -> System.out.println("China Zodiac is Horse");
+                case 11 -> System.out.println("China Zodiac is Sheep");
+                default -> System.out.println("You entered wrong data! Negative numbers do not acceptable!");
+            }
+        } else System.out.println("Your birthday's year can not big from 2023!");
+    }
+}
