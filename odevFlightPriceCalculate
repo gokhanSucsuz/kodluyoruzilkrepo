@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int distance;
+        byte age, type;
+        double perDistance = 0.10;
+        double total=0, discount = 0, price,x;
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter the distance...");
+        distance = scan.nextInt();
+        System.out.println("Please enter the age...");
+        age = scan.nextByte();
+        System.out.println("Please enter the trip type...");
+        type = scan.nextByte();
+
+        if(distance>=0 && age>=0 && (type==1 || type==2)) {
+            if(age<12) discount = 0.50;
+            else if(age<=24) discount = 0.10;
+            else if(age>65) discount = 0.30;
+            x = perDistance * distance;
+            price = x-(x * discount);
+            if(type==2) total = (price - price * 0.20)*2; else total = price;
+                System.out.println("Toplam Tutar => "+total);
+
+            }else System.out.println("You entered the wrong data!");
+        }
+    }
